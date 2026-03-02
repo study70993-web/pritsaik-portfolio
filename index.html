@@ -683,6 +683,14 @@
             transform: scale(1.05);
         }
 
+        .work-card iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+            position: absolute;
+            inset: 0;
+        }
+
         .work-card-empty {
             width: 100%;
             height: 100%;
@@ -1311,74 +1319,87 @@
             <div class="section-line reveal d2"></div>
 
             <div class="portfolio-grid">
-                <!-- Card 1 — your main reel (spans 2 columns) -->
+                <!-- Card 1 — Face Wash Promo (spans 2 columns) -->
                 <div class="card reveal d1">
                     <div class="work-card">
-                        <video autoplay muted loop playsinline src="ME 25FPS.mp4"></video>
+                        <iframe src="https://www.youtube.com/embed/qfrs9lI6a88" title="Face Wash Promo"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
                         <div class="work-overlay"></div>
                         <div class="work-info">
-                            <h3>Showreel 2025</h3>
-                            <span>Motion Reel · Cinematic</span>
+                            <h3>Face Wash Promo</h3>
+                            <span>Motion Graphics · Advertisement</span>
                         </div>
                     </div>
                 </div>
 
-                <!-- Card 2 — add your next video -->
+                <!-- Card 2 — 12 December 2025 -->
                 <div class="card reveal d2">
                     <div class="work-card">
-                        <div class="work-card-empty">
-                            <div class="play-icon">▶</div>
-                            <div class="card-lbl">Add Your Video</div>
-                        </div>
+                        <iframe src="https://www.youtube.com/embed/8G4YXMLvS5Y" title="12 December 2025"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
                         <div class="work-overlay"></div>
                         <div class="work-info">
-                            <h3>Project Title</h3>
-                            <span>Category</span>
+                            <h3>12 December 2025</h3>
+                            <span>Cinematic · Edit</span>
                         </div>
                     </div>
                 </div>
 
-                <!-- Card 3 -->
+                <!-- Card 3 — Luxury Villa Tour Lonavala -->
                 <div class="card reveal d2">
                     <div class="work-card">
-                        <div class="work-card-empty">
-                            <div class="play-icon">▶</div>
-                            <div class="card-lbl">Add Your Video</div>
-                        </div>
+                        <iframe src="https://www.youtube.com/embed/3EF8M2F5uKA" title="Luxury Villa Tour Lonavala"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
                         <div class="work-overlay"></div>
                         <div class="work-info">
-                            <h3>Project Title</h3>
-                            <span>Category</span>
+                            <h3>Luxury Villa Tour</h3>
+                            <span>Real Estate · Cinematic</span>
                         </div>
                     </div>
                 </div>
 
-                <!-- Card 4 -->
+                <!-- Card 4 — Cinematic Real Estate Tour Irvine -->
                 <div class="card reveal d3">
                     <div class="work-card">
-                        <div class="work-card-empty">
-                            <div class="play-icon">▶</div>
-                            <div class="card-lbl">Add Your Video</div>
-                        </div>
+                        <iframe src="https://www.youtube.com/embed/VKAKbueezMk"
+                            title="Cinematic Real Estate Tour Irvine"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
                         <div class="work-overlay"></div>
                         <div class="work-info">
-                            <h3>Project Title</h3>
-                            <span>Category</span>
+                            <h3>Cinematic Real Estate Tour</h3>
+                            <span>Real Estate · Luxury</span>
                         </div>
                     </div>
                 </div>
 
-                <!-- Card 5 -->
+                <!-- Card 5 — ForeverAgo -->
                 <div class="card reveal d3">
                     <div class="work-card">
-                        <div class="work-card-empty">
-                            <div class="play-icon">▶</div>
-                            <div class="card-lbl">Add Your Video</div>
-                        </div>
+                        <iframe src="https://www.youtube.com/embed/LpSbJWjO9aU" title="ForeverAgo"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
                         <div class="work-overlay"></div>
                         <div class="work-info">
-                            <h3>Project Title</h3>
-                            <span>Category</span>
+                            <h3>ForeverAgo</h3>
+                            <span>Music Video · Creative</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 6 — Viral Reels Tutorial -->
+                <div class="card reveal d3">
+                    <div class="work-card">
+                        <iframe src="https://www.youtube.com/embed/C-yZlQXN3rQ" title="Viral Reels Tutorial"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
+                        <div class="work-overlay"></div>
+                        <div class="work-info">
+                            <h3>Viral Reels Tutorial</h3>
+                            <span>After Effects · Tutorial</span>
                         </div>
                     </div>
                 </div>
@@ -1457,20 +1478,24 @@
                 <p class="reveal d2">Have a vision? Let's make it real. Tell me about your project and I'll get back to
                     you within 24 hours.</p>
 
-                <form class="contact-form reveal d3" onsubmit="handleSubmit(event)">
+                <form class="contact-form reveal d3" id="contact-form">
+                    <input type="hidden" name="_subject" value="New Project Inquiry — PRITSAIK Portfolio">
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_template" value="table">
+                    <input type="text" name="_honey" style="display:none">
                     <div class="form-row">
                         <div class="form-group">
                             <label>Your Name</label>
-                            <input type="text" placeholder="John Doe" required />
+                            <input type="text" name="name" placeholder="John Doe" required />
                         </div>
                         <div class="form-group">
                             <label>Email</label>
-                            <input type="email" placeholder="john@example.com" required />
+                            <input type="email" name="email" placeholder="john@example.com" required />
                         </div>
                     </div>
                     <div class="form-group">
                         <label>Service Needed</label>
-                        <select>
+                        <select name="service">
                             <option value="">Select a package...</option>
                             <option>Basic Edit — ₹999</option>
                             <option>Pro Edit — ₹2,999</option>
@@ -1480,7 +1505,8 @@
                     </div>
                     <div class="form-group">
                         <label>Tell Me About Your Project</label>
-                        <textarea placeholder="Describe your vision, deadline, and any references..."></textarea>
+                        <textarea name="message" placeholder="Describe your vision, deadline, and any references..."
+                            required></textarea>
                     </div>
                     <button type="submit" class="form-submit">Send Message ✦</button>
                 </form>
@@ -1621,19 +1647,49 @@
         });
 
         // ── CONTACT FORM ──
-        function handleSubmit(e) {
+        // ── CONTACT FORM (sends to pritomsaikia566@gmail.com via FormSubmit) ──
+        const contactForm = document.getElementById('contact-form');
+        contactForm.addEventListener('submit', async (e) => {
             e.preventDefault();
-            const btn = e.target.querySelector('.form-submit');
-            btn.textContent = '✓ Sent! I\'ll be in touch soon.';
-            btn.style.background = 'linear-gradient(135deg, #1a7a4a, #0d5c37)';
-            btn.style.boxShadow = '0 0 30px rgba(26,122,74,.5)';
+            const btn = contactForm.querySelector('.form-submit');
+            const originalText = btn.textContent;
+
+            // Show sending state
+            btn.textContent = 'Sending…';
+            btn.style.opacity = '.7';
+            btn.disabled = true;
+
+            try {
+                const formData = new FormData(contactForm);
+                const response = await fetch('https://formsubmit.co/ajax/pritomsaikia566@gmail.com', {
+                    method: 'POST',
+                    body: formData,
+                    headers: { 'Accept': 'application/json' }
+                });
+
+                if (response.ok) {
+                    btn.textContent = '✓ Sent! I\'ll be in touch soon.';
+                    btn.style.background = 'linear-gradient(135deg, #1a7a4a, #0d5c37)';
+                    btn.style.boxShadow = '0 0 30px rgba(26,122,74,.5)';
+                    btn.style.opacity = '1';
+                    contactForm.reset();
+                } else {
+                    throw new Error('Failed');
+                }
+            } catch (err) {
+                btn.textContent = '✕ Error — Try again';
+                btn.style.background = 'linear-gradient(135deg, #c0392b, #96281b)';
+                btn.style.boxShadow = '0 0 30px rgba(192,57,43,.5)';
+                btn.style.opacity = '1';
+            }
+
             setTimeout(() => {
-                btn.textContent = 'Send Message ✦';
+                btn.textContent = originalText;
                 btn.style.background = '';
                 btn.style.boxShadow = '';
-                e.target.reset();
+                btn.disabled = false;
             }, 4000);
-        }
+        });
 
         // ── VIDEO HOVER PLAY ──
         document.querySelectorAll('.work-card video').forEach(v => {
